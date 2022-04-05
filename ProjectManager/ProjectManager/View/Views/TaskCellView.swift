@@ -30,6 +30,7 @@ struct TaskCellView: View {
                 .lineLimit(3)
             Text(task.limitDate, formatter: taskLimitDateFormatter)
                 .font(.body)
+                .foregroundColor(self.isLastDay ? .red : .black)
                 .onAppear {
                     if task.limitDate.isLastDay() {
                         isLastDay.toggle()
