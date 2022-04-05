@@ -37,13 +37,4 @@ struct TaskCellView: View {
                 }
         }
     }
-    
-    func isLastDay(color: Color) {
-        let startOfDay = Calendar.current.startOfDay(for: Date())
-        if self > startOfDay {
-            return true
-        } else {
-            return false
-        }
-    }
 }
