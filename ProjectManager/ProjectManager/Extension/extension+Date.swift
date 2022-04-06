@@ -10,7 +10,7 @@ import Foundation
 extension Date {
     func isLastDay() -> Bool {
         let startOfDay = Calendar.current.startOfDay(for: Date())
-        if self > startOfDay {
+        if self < startOfDay {
             return true
         } else {
             return false

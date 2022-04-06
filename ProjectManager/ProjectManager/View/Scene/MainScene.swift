@@ -23,7 +23,11 @@ struct MainScene: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     AddButtonView(show: $isShowAddScene)
                         .sheet(isPresented: $isShowAddScene, onDismiss: nil) {
-                            AddScene(taskViewModel: taskViewModel, showAddScene: $isShowAddScene)
+                            if #available(iOS 15.0, *) {
+                                AddScene(taskViewModel: taskViewModel, showAddScene: $isShowAddScene)
+                            } else {
+                                // Fallback on earlier versions
+                            }
                         }
                 }
             }
