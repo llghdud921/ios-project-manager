@@ -50,6 +50,7 @@ struct TaskListView: View {
                         }
                         .onTapGesture {
                             isShowDetailScene.toggle()
+                            DetailScene(taskViewModel: taskViewModel, task: task, showDetailScene: $isShowDetailScene)
                         }
                         .onLongPressGesture(minimumDuration: 0.5, maximumDistance: 10.0, perform: {
                             isShowPopover.toggle()
