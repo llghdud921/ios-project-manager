@@ -26,7 +26,6 @@ struct MainScene: View {
                             if #available(iOS 15.0, *) {
                                 AddScene(taskViewModel: taskViewModel, showAddScene: $isShowAddScene)
                             } else {
-                                // Fallback on earlier versions
                             }
                         }
                 }
